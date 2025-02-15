@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+     <com.google.android.material.button.MaterialButton
+         android:id="@+id/playQuizButton"
+         android:layout_width="match_parent"
+         android:layout_height="60dp"
+         android:background="@drawable/rounded_button"
+         android:text="Play Now"
+         android:textColor="@android:color/white"
+         android:textSize="18sp"
+         android:gravity="center"
+         android:padding="10dp"
+         android:elevation="4dp"
+         android:layout_marginTop="16dp"
+         android:textAllCaps="false"
+         tools:ignore="MissingConstraints" />
+</androidx.constraintlayout.widget.ConstraintLayout>
