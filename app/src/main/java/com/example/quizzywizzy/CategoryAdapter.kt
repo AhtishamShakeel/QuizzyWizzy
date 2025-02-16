@@ -19,10 +19,15 @@ class CategoryAdapter(private val categories: List<Category>) :
                         .inflate(R.layout.item_category, parent, false)
                 return ViewHolder(view)
         }
+        var onItemClick: ((Category) -> Unit)? = null
         // Bind data to views - THIS WAS MISSING
         override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-                val category = categories[position]
-                holder.btnCategory.text = category.title // Make sure your Category class has 'title' property
+                val category = categories[position] // Get the category at current position
+                holder.btnCategory.text = category.title // Set button text
+
+                holder.btnCategory.setOnClickListener {
+                        onItemClick?.invoke(category) // Pass the actual category object
+                }
         }
 
         // Return total items count

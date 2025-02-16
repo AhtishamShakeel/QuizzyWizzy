@@ -7,11 +7,11 @@ import retrofit2.http.Query
 
 interface QuizApiService {
     // Categories
-    @GET("category")
+    @GET("/")
     suspend fun getAllCategories(): List<Category>
 
     // Topics for a category
-    @GET("topics")
+    @GET("topic/")
     suspend fun getTopicsByCategory(@Query("category") categoryId: Int): List<Topic>
 
     // Subtopics for a topic
